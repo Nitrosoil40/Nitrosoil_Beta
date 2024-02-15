@@ -585,6 +585,13 @@
         map.on("layerremove", function(){
             resetLabels([layer_Lote1_2,layer_Lote2_3,layer_Lote3_4,layer_Lote4_5,layer_AnalsisdesuelosCocotera_Coordenadas_6]);
         });
+             window.addEventListener('message', function(event) {
+      if (event.origin !== 'https://nitrosoil40.github.io') return; // Verificar el origen del mensaje
+      if (event.data.action === 'activateSamples') {
+        // Activar la capa correspondiente
+           document.getElementById('layer_AnalsisdesuelosCocotera_Coordenadas_6').setAttribute('active', 'true');
+      }
+    });
         </script>
     </body>
 </html>
